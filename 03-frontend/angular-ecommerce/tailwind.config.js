@@ -9,14 +9,7 @@ module.exports = {
       'serif': 'Inter var, ui-sans-serif, system-ui',
     },
     daisyui: {
-      themes: [
-        {
-          "fantasy": {
-            "primary": "#0000ff",
-            "secondary": "#f6f6f6",
-          },
-        },
-      ],
+      themes: [],
     },
 
     extend: {},

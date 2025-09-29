@@ -29,6 +29,12 @@
             ],
             "tsConfig": "tsconfig.app.json",
             "assets": [
+              "src/assets",
+              {
+                "glob": "**/*",
+                "input": "src/assets/images/placeholders",
+                "output": "/assets/images/placeholders"
+              },
               {
                 "glob": "**/*",
                 "input": "public"

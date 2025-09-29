@@ -15,6 +15,15 @@ export class ProductService {
 
   }
 
+  /**
+   * Retrieves the complete list of products from the API.
+   *
+   * Makes an HTTP GET request to the base URL and extracts the products array
+   * from the nested response structure (_embedded.products).
+   *
+   * @returns Observable<Product[]> - An observable stream that emits an array of Product objects
+   */
+
   // Return an observable - Map the JSON data from Spring Data REST to product array
   getProductList(): Observable<Product[]> {
     return this.HttpClient.get<GetResponse>(this.baseUrl).pipe(
@@ -25,7 +34,11 @@ export class ProductService {
 
 // create a supporting interface
 
-// unwraps the JSON from Spring Data REST - _embedded entry
+/**
+ * Interface to unwrap the JSON response from Spring Data REST.
+ * Spring Data REST wraps collections in an _embedded object,
+ * which is part of the HAL (Hypertext Application Language) format.
+ */
 interface GetResponse {
   _embedded: {
     products: Product[];

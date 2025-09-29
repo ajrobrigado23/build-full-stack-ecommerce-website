@@ -1,1 +1,27 @@
-<p>product-list works!</p>
+<div class="overflow-x-auto">
+  <table class="table">
+    <!-- head -->
+    <thead>
+      <tr>
+        <th></th>
+        <th>Name</th>
+        <th>Price</th>
+        <th>Units in Stock</th>
+      </tr>
+    </thead>
+    <tbody>
+      <!-- row 1 -->
+      <tr *ngFor="let tempProduct of products">
+        <td>
+          <img src="{{tempProduct.imageUrl}}" alt="" width="50" height="50"/>
+        </td>
+
+        <td>{{tempProduct.name}}</td>
+        <td>{{tempProduct.unitPrice | currency:'USD'}}</td>
+        <td>{{ tempProduct.unitsInStock }}</td>
+      </tr>
+    </tbody>
+
+  </table>
+
+</div>
