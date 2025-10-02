@@ -1,2 +1,371 @@
-<h1 class="text-2xl">Product</h1>
-<app-product-list></app-product-list>
+<!-- Header -->
+<header class="bg-white sticky top-0 z-50">
+
+  <!--Navbar -->
+  <div class="max-w-7xl mx-auto px-6 py-4">
+
+    <div class="flex items-center justify-between">
+
+      <div class="flex grow-1 items-center gap-8">
+        <div class="flex-1">
+          <h1 class="text-2xl font-bold">
+            hype<span class="font-normal">books</span>
+          </h1>
+        </div>
+
+        <nav class="flex grow-2 gap-8">
+          <a href="#" class="text-gray-900 font-medium">Book Store</a>
+          <a href="#" class="text-gray-500">Wishlist</a>
+          <a href="#" class="text-gray-500">My Collection</a>
+        </nav>
+      </div>
+
+      <div class="flex items-center gap-4">
+
+        <div class="flex items-center gap-2">
+          <div class="dropdown dropdown-end">
+            <div tabindex="0" role="button" class="btn btn-ghost btn-circle">
+              <div class="indicator">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"> <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z" /> </svg>
+                <span class="badge badge-sm badge-error indicator-item">8</span>
+              </div>
+            </div>
+            <div
+              tabindex="0"
+              class="card card-compact dropdown-content bg-base-100 z-1 mt-3 w-52 shadow">
+              <div class="card-body">
+                <span class="text-lg font-bold">8 Items</span>
+                <span class="text-info">Subtotal: $999</span>
+                <div class="card-actions">
+                  <button class="btn btn-primary btn-block">View cart</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="dropdown dropdown-end">
+            <div tabindex="0" role="button" class="btn btn-ghost btn-circle avatar">
+              <div class="w-10 rounded-full">
+                <img
+                  alt="Tailwind CSS Navbar component"
+                  src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp" />
+              </div>
+            </div>
+
+            <ul
+              tabindex="0"
+              class="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow">
+              <li>
+                <a class="justify-between">
+                  Profile
+                  <span class="badge">New</span>
+                </a>
+              </li>
+              <li><a>Settings</a></li>
+              <li><a>Logout</a></li>
+            </ul>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</header>
+
+<div class="max-w-7xl mx-auto px-6 py-8">
+  <div class="flex gap-8">
+
+    <!-- Sidebar -->
+    <aside class="w-64 flex-shrink-0">
+      <!-- Search -->
+      <div class="mb-8">
+        <div class="relative">
+          <input
+            type="text"
+            placeholder="Title, Subject..."
+            class="input input-bordered w-full pr-10 bg-gray-100 border-0"
+          />
+          <svg class="absolute right-3 top-1/2 -translate-y-1/2 text-gray-400 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+          </svg>
+        </div>
+      </div>
+
+      <!-- Categories -->
+      <div class="space-y-6">
+        <!-- Popular Subjects -->
+        <div>
+          <h3 class="font-semibold text-gray-900 mb-3">Popular Subjects</h3>
+          <ul class="space-y-2">
+            <li><a href="#" class="text-gray-500 hover:text-gray-900 text-sm">Biographies & memoirs</a></li>
+            <li><a href="#" class="text-gray-500 hover:text-gray-900 text-sm">Business & Money</a></li>
+            <li><a href="#" class="text-gray-500 hover:text-gray-900 text-sm">Children's books</a></li>
+            <li><a href="#" class="text-gray-500 hover:text-gray-900 text-sm">Computers & technology</a></li>
+            <li><a href="#" class="text-gray-500 hover:text-gray-900 text-sm">Parenting & families</a></li>
+          </ul>
+        </div>
+
+        <!-- Fiction -->
+        <div>
+          <h3 class="font-semibold text-gray-900 mb-3">Fiction</h3>
+          <ul class="space-y-2">
+            <li><a href="#" class="text-gray-500 hover:text-gray-900 text-sm">Adult</a></li>
+            <li><a href="#" class="text-gray-500 hover:text-gray-900 text-sm">Children's & Young</a></li>
+            <li><a href="#" class="text-gray-500 hover:text-gray-900 text-sm">General Fiction</a></li>
+            <li><a href="#" class="text-gray-500 hover:text-gray-900 text-sm">Literature & Fiction</a></li>
+          </ul>
+        </div>
+
+        <!-- Non-Fiction -->
+        <div>
+          <h3 class="font-semibold text-gray-900 mb-3">Non-Fiction</h3>
+          <ul class="space-y-2">
+            <li><a href="#" class="text-gray-500 hover:text-gray-900 text-sm">Archaeology</a></li>
+            <li><a href="#" class="text-gray-500 hover:text-gray-900 text-sm">Architecture</a></li>
+            <li><a href="#" class="text-gray-500 hover:text-gray-900 text-sm">Business & Economics</a></li>
+            <li><a href="#" class="text-gray-500 hover:text-gray-900 text-sm">Politics & Social Sciences</a></li>
+            <li><a href="#" class="text-gray-500 hover:text-gray-900 text-sm">Current Events</a></li>
+            <li><a href="#" class="text-gray-500 hover:text-gray-900 text-sm">Self-Help</a></li>
+            <li><a href="#" class="text-gray-500 hover:text-gray-900 text-sm">Humor & Entertainment</a></li>
+          </ul>
+        </div>
+      </div>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="flex-1">
+
+      <!-- Tabs -->
+      <div class="flex items-center justify-between mb-6">
+        <div class="tabs tabs-bordered">
+          <button class="tab tab-lg tab-active font-semibold">For You</button>
+          <button class="tab tab-lg text-gray-400">New Releases</button>
+          <button class="tab tab-lg text-gray-400">Amazon Best Seller</button>
+        </div>
+
+        <!-- Icons -->
+        <div class="flex gap-2">
+          <button class="btn btn-ghost btn-square btn-sm">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z"></path>
+            </svg>
+          </button>
+          <button class="btn btn-ghost btn-square btn-sm">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+            </svg>
+          </button>
+        </div>
+
+      </div>
+
+      <!-- Books Grid -->
+      <div class="grid grid-cols-2 gap-6">
+
+        <!-- Book 1 -->
+        <div class="flex gap-4">
+          <div class="relative w-32 h-44 bg-amber-400 rounded-lg flex-shrink-0 p-4 flex flex-col justify-between">
+            <span class="absolute top-2 left-2 bg-orange-500 text-white text-xs px-2 py-1 rounded">Best Seller</span>
+            <div class="text-black font-bold text-lg leading-tight">WORK FOR MONEY</div>
+          </div>
+
+          <div class="flex-1 flex flex-col justify-between py-1">
+
+            <div>
+              <h3 class="font-medium text-gray-900 mb-1 line-clamp-2">Work for Money, Design for Love</h3>
+              <p class="text-sm text-gray-500 mb-2">David Airey</p>
+              <p class="text-xs text-gray-400 mb-2">Business & Money</p>
+              <div class="flex gap-1">
+                <span class="text-yellow-400 text-sm">★</span>
+                <span class="text-yellow-400 text-sm">★</span>
+                <span class="text-yellow-400 text-sm">★</span>
+                <span class="text-yellow-400 text-sm">★</span>
+                <span class="text-yellow-400 text-sm">★</span>
+              </div>
+            </div>
+
+            <div class="flex items-center justify-between mt-2">
+              <span class="text-lg font-semibold text-green-600">$22.00</span>
+              <div class="flex gap-2">
+                <button class="btn btn-sm btn-neutral">Add to cart</button>
+                <button class="btn btn-ghost btn-sm btn-circle">
+                  <svg class="w-4 h-4 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path>
+                  </svg>
+                </button>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+
+        <!-- Book 2 -->
+        <div class="flex gap-4">
+          <div class="relative w-32 h-44 bg-teal-400 rounded-lg flex-shrink-0 p-4 flex flex-col justify-between">
+            <span class="absolute top-2 left-2 bg-orange-500 text-white text-xs px-2 py-1 rounded">Best Seller</span>
+            <div class="text-white font-bold text-lg leading-tight">VERY NICE</div>
+          </div>
+          <div class="flex-1 flex flex-col justify-between py-1">
+            <div>
+              <h3 class="font-medium text-gray-900 mb-1 line-clamp-2">Very Nice: A novel</h3>
+              <p class="text-sm text-gray-500 mb-2">Marcy Dermansky</p>
+              <p class="text-xs text-gray-400 mb-2">Literature & Fiction</p>
+              <div class="flex gap-1">
+                <span class="text-yellow-400 text-sm">★</span>
+                <span class="text-yellow-400 text-sm">★</span>
+                <span class="text-yellow-400 text-sm">★</span>
+                <span class="text-yellow-400 text-sm">★</span>
+                <span class="text-gray-300 text-sm">★</span>
+              </div>
+            </div>
+            <div class="flex items-center justify-between mt-2">
+              <span class="text-lg font-semibold text-green-600">$18.00</span>
+              <div class="flex gap-2">
+                <button class="btn btn-sm btn-neutral">Add to cart</button>
+                <button class="btn btn-ghost btn-sm btn-circle">
+                  <svg class="w-4 h-4 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path>
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Book 3 -->
+        <div class="flex gap-4">
+          <div class="relative w-32 h-44 bg-yellow-400 rounded-lg flex-shrink-0 p-4 flex flex-col justify-between">
+            <div class="text-black font-bold text-lg leading-tight">THE PSYCHOLOGY OF</div>
+          </div>
+          <div class="flex-1 flex flex-col justify-between py-1">
+            <div>
+              <h3 class="font-medium text-gray-900 mb-1 line-clamp-2">The Psychology of Graphic Design Pricing</h3>
+              <p class="text-sm text-gray-500 mb-2">Various</p>
+              <p class="text-xs text-gray-400 mb-2">Graphic Design</p>
+              <div class="flex gap-1">
+                <span class="text-yellow-400 text-sm">★</span>
+                <span class="text-yellow-400 text-sm">★</span>
+                <span class="text-yellow-400 text-sm">★</span>
+                <span class="text-yellow-400 text-sm">★</span>
+                <span class="text-gray-300 text-sm">★</span>
+              </div>
+            </div>
+            <div class="flex items-center justify-between mt-2">
+              <span class="text-lg font-semibold text-green-600">$20.59</span>
+              <div class="flex gap-2">
+                <button class="btn btn-sm btn-neutral">Add to cart</button>
+                <button class="btn btn-ghost btn-sm btn-circle">
+                  <svg class="w-4 h-4 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path>
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Book 4 -->
+        <div class="flex gap-4">
+          <div class="relative w-32 h-44 bg-pink-300 rounded-lg flex-shrink-0 p-4 flex flex-col justify-between">
+            <div class="text-white font-bold text-lg leading-tight">JULIET THE MANIAC</div>
+          </div>
+          <div class="flex-1 flex flex-col justify-between py-1">
+            <div>
+              <h3 class="font-medium text-gray-900 mb-1 line-clamp-2">Juliet the Maniac: A Novel</h3>
+              <p class="text-sm text-gray-500 mb-2">Juliet Escoria</p>
+              <p class="text-xs text-gray-400 mb-2">Literature & Fiction</p>
+              <div class="flex gap-1">
+                <span class="text-yellow-400 text-sm">★</span>
+                <span class="text-yellow-400 text-sm">★</span>
+                <span class="text-yellow-400 text-sm">★</span>
+                <span class="text-yellow-400 text-sm">★</span>
+                <span class="text-gray-300 text-sm">★</span>
+              </div>
+            </div>
+            <div class="flex items-center justify-between mt-2">
+              <span class="text-lg font-semibold text-green-600">$9.99</span>
+              <div class="flex gap-2">
+                <button class="btn btn-sm btn-neutral">Add to cart</button>
+                <button class="btn btn-ghost btn-sm btn-circle">
+                  <svg class="w-4 h-4 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path>
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Book 5 -->
+        <div class="flex gap-4">
+          <div class="relative w-32 h-44 bg-gray-900 rounded-lg flex-shrink-0 p-4 flex flex-col justify-between">
+            <div class="text-white font-bold text-lg leading-tight">LOGO DESIGN LOVE</div>
+          </div>
+          <div class="flex-1 flex flex-col justify-between py-1">
+            <div>
+              <h3 class="font-medium text-gray-900 mb-1 line-clamp-2">Logo Design Love: A Guide to Creating...</h3>
+              <p class="text-sm text-gray-500 mb-2">David Airey</p>
+              <p class="text-xs text-gray-400 mb-2">Graphic Design</p>
+              <div class="flex gap-1">
+                <span class="text-yellow-400 text-sm">★</span>
+                <span class="text-yellow-400 text-sm">★</span>
+                <span class="text-yellow-400 text-sm">★</span>
+                <span class="text-yellow-400 text-sm">★</span>
+                <span class="text-gray-300 text-sm">★</span>
+              </div>
+            </div>
+            <div class="flex items-center justify-between mt-2">
+              <span class="text-lg font-semibold text-green-600">$24.01</span>
+              <div class="flex gap-2">
+                <button class="btn btn-sm btn-neutral">Add to cart</button>
+                <button class="btn btn-ghost btn-sm btn-circle">
+                  <svg class="w-4 h-4 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path>
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Book 6 -->
+        <div class="flex gap-4">
+          <div class="relative w-32 h-44 bg-orange-500 rounded-lg flex-shrink-0 p-4 flex flex-col justify-between">
+            <div class="text-white font-bold text-lg leading-tight">THINKING WITH TYPE</div>
+          </div>
+          <div class="flex-1 flex flex-col justify-between py-1">
+            <div>
+              <h3 class="font-medium text-gray-900 mb-1 line-clamp-2">Thinking with Type, 2nd revised and expanded</h3>
+              <p class="text-sm text-gray-500 mb-2">Ellen Lupton</p>
+              <p class="text-xs text-gray-400 mb-2">Graphic Design</p>
+              <div class="flex gap-1">
+                <span class="text-yellow-400 text-sm">★</span>
+                <span class="text-yellow-400 text-sm">★</span>
+                <span class="text-yellow-400 text-sm">★</span>
+                <span class="text-yellow-400 text-sm">★</span>
+                <span class="text-gray-300 text-sm">★</span>
+              </div>
+            </div>
+            <div class="flex items-center justify-between mt-2">
+              <span class="text-lg font-semibold text-green-600">$12.04</span>
+              <div class="flex gap-2">
+                <button class="btn btn-sm btn-neutral">Add to cart</button>
+                <button class="btn btn-ghost btn-sm btn-circle">
+                  <svg class="w-4 h-4 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path>
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </main>
+  </div>
+</div>
