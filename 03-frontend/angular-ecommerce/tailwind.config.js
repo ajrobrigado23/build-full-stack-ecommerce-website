@@ -4,15 +4,14 @@ module.exports = {
     "./src/**/*.{html,js,ts,tsx}",
   ],
   theme: {
-    fontFamily: {
-      'sans': 'Inter var, ui-sans-serif, system-ui',
-      'serif': 'Inter var, ui-sans-serif, system-ui',
+    extend: {
+      fontFamily: {
+        poppins: ['Poppins', 'sans-serif'],
+      },
     },
     daisyui: {
       themes: [],
     },
-
-    extend: {},
   },
   plugins: [
     require('@tailwindcss/typography'),

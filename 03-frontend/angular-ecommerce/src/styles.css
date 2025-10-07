@@ -1,4 +1,16 @@
 @import "tailwindcss";
+
 @plugin "daisyui" {
   themes: all;
+}
+
+/* add custome styles here */
+@theme {
+  --font-roboto: "Roboto", sans-serif;
+}
+
+@layer base {
+  body {
+    @apply font-roboto;
+  }
 }

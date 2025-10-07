@@ -1,6 +1,98 @@
+<!-- Book Grid-->
+<div class="grid grid-cols-2 gap-6">
+  <!-- Loop through-->
+  <div *ngFor="let book of books">
+    <!-- Product card body -->
+    <div class="card card-border border-0 flex gap-4">
+
+      <div class="card-body flex-1 flex flex-row p-0">
+        <!-- Book cover-->
+        <div [class]=" 'relative w-35 h-60 rounded-lg flex-shrink-0 p-4 flex flex-col justify-between ' + book.color">
+          <span *ngIf="book.badge" class="absolute top-2 left-2 bg-orange-500 text-white text-xs px-2 py-1 rounded">
+            {{book.badge}}</span>
+          <div [class]=" book.textColor + ' font-bold text-lg leading-tight' ">{{ getShortTitle(book.title) }}</div>
+        </div>
+
+        <div class="flex flex-col grow-2 mt-2 ms-4 mb-4">
+          <h3 class="text-base font-bold text-gray-900 mb-1 line-clamp-2 pt-1">{{ book.title }}</h3>
+          <p class="text-sm text-gray-500 mb-2">{{ book.author }}</p>
+          <p class="text-xs text-gray-400">{{book.category}}</p>
+
+          <div class="flex gap-1">
+             <span *ngFor="let star of [1,2,3,4,5]"
+                   [class]="star <= book.rating ? 'text-yellow-400' : 'text-gray-300'"
+                   class="text-2xl">
+              ★
+            </span>
+          </div>
+
+          <span class="text-lg font-semibold text-green-600 mt-2 mb-2">{{ book.price | currency }}</span>
+
+          <div class="flex items-end justify-between mt-2 mb-2">
+            <div class="flex gap-2">
+              <button class="btn btn-sm rounded-sm btn-neutral text-white">Add to cart</button>
+              <button class="btn btn-ghost btn-sm btn-circle">
+                <svg class="w-4 h-4 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path>
+                </svg>
+              </button>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--
 <div class="overflow-x-auto rounded-box border border-base-content/5 bg-base-100 w-full">
   <table class="table table-md">
-    <!-- head -->
+
     <thead class="bg-black text-white">
       <tr>
         <th></th>
@@ -10,7 +102,7 @@
       </tr>
     </thead>
     <tbody>
-      <!-- row 1 -->
+
       <tr *ngFor="let tempProduct of products">
         <td>
           <img src="{{tempProduct.imageUrl}}" alt="" width="50" height="50"/>
@@ -25,3 +117,4 @@
   </table>
 
 </div>
+-->
